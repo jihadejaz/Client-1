@@ -1,0 +1,149 @@
+  {{-- BAG SECTION START  --}}
+
+    <section style="background-color: #292525;">
+        <div class="container py-5">
+            <div class="container-fluid text-center">
+                <h1 class="">Bags Collection</h1>
+            </div>
+            <div class="row">
+                @foreach ($allProducts as $item)
+                    <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+                        <div class="card bg-dark">
+                            <div class="d-flex justify-content-between">
+                                {{-- <p class="lead mb-0">Today's Combo Offer</p> --}}
+                                <div class="bg-transparent rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="">
+                                    {{-- <p class="text-white mb-0 small">x4</p> --}}
+                                </div>
+                            </div>
+                            <div class="bg-image hover-zoom">
+                                <a href="{{ url('productdetails', $item['bag_name']) }}"><img
+                                        src="images/{{ $item['bag_image'] }}" class="w-100" /></a>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small text-muted">Bags</p>
+                                    <p class="small text-danger"><s>Rs {{ $item['bag_discounted_price'] }}</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0 text-white font-weight-lighter">{{ $item['bag_name'] }}</h5>
+                                    <h5 class="text-white mb-0 font-weight-lighter">Rs {{ $item['bag_price'] }}
+                                    </h5>
+                                </div>
+                                {{-- <input type="number" min="0" name="quantity" value="5"> --}}
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <p class="text-muted mb-0" style="color: black">Available: <span
+                                            class="fw-bold text-white">6</span></p>
+                                    <div class="ms-auto text-warning">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half"></i>
+                                    </div>
+                                </div>
+                                {{-- <a href="{{ route('add_to_bag_cart', $item['id']) }}" class="btn btn-warning"
+                                    style="border-radius: 0">Add to Cart</a> --}}
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
+    </section>
+    {{-- BAG SECTION END  --}}
+
+    {{-- PERFUME SECTION START  --}}
+
+    <section style="background-color: #292525;">
+        <div class="container py-5">
+            <div class="container-fluid text-center">
+                <h1 class="">Perfume Collection</h1>
+            </div>
+            <div class="row">
+                @foreach ($allProducts as $item)
+                    <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+                        <div class="card bg-dark">
+                            <div class="d-flex justify-content-between">
+                                {{-- <p class="lead mb-0">Today's Combo Offer</p> --}}
+                                <div class="bg-transparent rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="">
+                                    {{-- <p class="text-white mb-0 small">x4</p> --}}
+                                </div>
+                            </div>
+                            <div class="bg-image hover-zoom">
+                                <a href="{{ url('productdetails', $item['perfume_name']) }}"><img
+                                        src="images/{{ $item['perfume_image'] }}" class="w-100" /></a>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small text-muted">Bags</p>
+                                    <p class="small text-danger"><s>Rs {{ $item['perfume_discounted_price'] }}</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0 text-white font-weight-lighter">{{ $item['perfume_name'] }}</h5>
+                                    <h5 class="text-white mb-0 font-weight-lighter">Rs {{ $item['perfume_price'] }}
+                                    </h5>
+                                </div>
+                                {{-- <input type="number" min="0" name="quantity" value="5"> --}}
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <p class="text-muted mb-0" style="color: black">Available: <span
+                                            class="fw-bold text-white">6</span></p>
+                                    <div class="ms-auto text-warning">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half"></i>
+                                    </div>
+                                </div>
+                                {{-- <a href="{{ route('add_to_perfume_cart', $item['id']) }}" class="btn btn-warning"
+                                    style="border-radius: 0">Add to Cart</a> --}}
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
+    </section>
+    {{-- PERFUME SECTION END  --}}
+
+    <div class="container-fluid page-wrapper" style="background: #292525">
+        <div class="page-inner">
+            <div class="row ">
+                <div class="el-wrapper bg-dark">
+                    <div class="box-up">
+                        <img class="img img-fluid" src="images/WhatsApp Image 2023-07-26 at 15.30.50.jpg"
+                            alt="">
+                        <div class="img-info">
+                            <div class="info-inner">
+                                {{-- <span class="p-name">I feel like Pablo</span> --}}
+                                {{-- <span class="p-company">Yeezy</span> --}}
+                            </div>
+                            <div class="a-size">Signature Perfume by:<span class="size text-white">Taha Azhar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-down">
+                        <div class="h-bg">
+                            <div class="h-bg-inner"></div>
+                        </div>
+
+                        <a class="cart" href="#">
+                            <span class="price text-black">Rs 2500</span>
+                            <span class="add-to-cart">
+                                <span class="txt text-black">Add in cart</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
